@@ -23,6 +23,7 @@ const info = (request, response) => {
     // If the request was: localhost/info?country=England
     // - we can access country via url.query.country
     const country = url.query.country;
+    const city = url.query.city;
     
     // Exercise:
     // - Extend this example to accept a city and return this city in the response
@@ -33,7 +34,7 @@ const info = (request, response) => {
     
     // writing to a response does not send the response back
     response.write(`<p>The country is ${country}</p>`);
-
+    response.write(`<p>The city is ${city}</p>`);
     // now send the response back
     response.end();
 }

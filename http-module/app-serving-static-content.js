@@ -31,7 +31,9 @@ const requestHandler = (request, response) => {
         case "/":
             serve(request, response, "index.html");
             break;
-        // Exercise: Create a second route capable of serving an about.html page from the `static` folder
+        case "/about":
+            serve(request, response, "about.html");
+            break;
         default:
             notFound(request, response);
             break;

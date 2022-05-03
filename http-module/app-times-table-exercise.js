@@ -33,6 +33,10 @@ const table = (request, response) => {
     // - 12 * 2 = 24
     // etc...
 
+    for (let index = 1; index <= range; index++) {
+        response.write(`<p>${table} * ${index} = ${index * table}</p>`);
+    }
+
     response.end();
 }
 
