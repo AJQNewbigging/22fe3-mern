@@ -17,7 +17,13 @@ const postSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref: 'User', // is the name of the collection which the id references
         required: true
-    }
+    },
+    comments: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: 'Comment'
+        }
+    ]
 });
 
 const Post = mongoose.model('Post', postSchema);

@@ -10,5 +10,6 @@ router.get('/:id', postController.readById);
 router.post('/', postController.create);
 router.put('/:id', postController.update);
 router.delete('/:id', postController.delete);
+router.post('/:postId/comment', postController.addComment);
 
 module.exports = router;
